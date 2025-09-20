@@ -2,7 +2,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      padding-bottom: 100px;
+      padding-bottom: 120px;
     }
     .heading{
         color: #502e09;
@@ -10,7 +10,7 @@
     .hero {
       background: linear-gradient(135deg, #feec9c, #feec9c);
       color: #fff;
-      padding: 40px 20px;
+      padding: 20px 20px;
       text-align: center;
     }
     .hero-logo img {
@@ -82,13 +82,14 @@
     }
 
     /* Mobile only adjustments */
+/* Mobile only adjustments */
 @media (max-width: 767.98px) {
   .hero {
     text-align: center;
     padding: 30px 15px;
   }
 
- .hero h1 {
+  .hero h1 {
     font-size: 1.4rem;   /* smaller size for mobile */
   }
 
@@ -116,9 +117,20 @@
     margin-bottom: 20px;
   }
 
-  /* Info boxes - make 2 per row */
+  /* Info boxes - equal height */
+  .row.g-3 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .row.g-3 > [class*="col-"] {
+    display: flex;
+  }
   .info-box {
+    flex: 1;
+    display: flex;
     flex-direction: column; /* stack icon above text */
+    justify-content: center;
+    align-items: center;
     padding: 12px;
   }
   .info-box i {

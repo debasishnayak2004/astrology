@@ -130,10 +130,11 @@
   .row.g-3 > [class*="col-"] {
     display: flex;
   }
-  .info-box {
-    flex: 1;
+.info-box {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Keeps width and height equal */
     display: flex;
-    flex-direction: column; /* stack icon above text */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 12px;
@@ -146,7 +147,18 @@
     font-size: 16px;
     padding: 0;
   }
+   .row.text-center.g-3 > [class*="col-"] > div {
+    aspect-ratio: 1 / 1;   /* Makes the box square */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .content-box{
+    padding-left: 40px;
+  }
 }
+
 
 
     /*  Who is this for  */
